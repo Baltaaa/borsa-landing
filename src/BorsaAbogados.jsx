@@ -29,12 +29,12 @@ const INSTAGRAM_POSTS = [
   {
     type: "REEL",
     category: "Siniestros Viales",
-    title: "¿Chocaste? 3 cosas que la aseguradora NO quiere que sepas.",
-    desc: "En este video te explicamos por qué nunca tenés que aceptar la primera oferta de la compañía de seguros sin antes consultar con un especialista...",
-    imgSrc: "/borsa-scales.jpg", // Podés poner una foto tuya o captura del reel en la carpeta public/
-    postUrl: "https://www.instagram.com/p/DF8_9_vR_vR/", // Reemplazá con el link real de tu Reel
-    likes: "1,240",
-    comments: "84"
+    title: "Todas las aseguradoras deben responder por la obligación que tienen por ley.",
+    desc: "Te explicamos de forma clara y contundente por qué las compañías de seguros están obligadas legalmente a responder ante un siniestro y cómo hacer valer tus derechos...",
+    imgSrc: "/instagram-reel-1.png", // Imagen real subida por el usuario
+    postUrl: "https://www.instagram.com/p/DWrorspkeI9/", // Link real provisto por el usuario
+    likes: "1,580",
+    comments: "112"
   },
   {
     type: "INFOGRAFÍA",
@@ -813,7 +813,7 @@ function BorsaAbogados() {
               No dejes pasar el tiempo. Reclamá lo que te corresponde.
             </h2>
             <p className="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
-              Las aseguradoras juegan con el desgaste y el paso del tiempo. Iniciá hoy tu consulta gratuita por WhatsApp y asegurá tu máxima indemnización con el respaldo de especialistas.
+              Las aseguradoras juegan con el desgaste and el paso del tiempo. Iniciá hoy tu consulta gratuita por WhatsApp y asegurá tu máxima indemnización con el respaldo de especialistas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
