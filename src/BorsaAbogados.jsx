@@ -37,14 +37,14 @@ const INSTAGRAM_POSTS = [
     comments: "112"
   },
   {
-    type: "INFOGRAFÍA",
-    category: "Accidentes de Trabajo",
-    title: "¿Qué es un accidente In Itinere y cómo reclamar a la ART?",
-    desc: "Si sufriste un accidente yendo o volviendo de tu trabajo, estás cubierto por la ART. Te contamos los requisitos clave para que tu reclamo sea aceptado...",
-    imgSrc: "/borsa-consultation.jpg", // Podés poner una foto tuya o captura en la carpeta public/
-    postUrl: "https://www.instagram.com/p/DF8_9_vR_vR/", // Reemplazá con el link real de tu post
-    likes: "942",
-    comments: "51"
+    type: "REEL",
+    category: "Derecho Penal",
+    title: "¿Te llegó una denuncia o una citación penal?",
+    desc: "Te explicamos qué pasos debés seguir de inmediato si recibís una notificación judicial o policial para proteger tus derechos desde el primer momento...",
+    imgSrc: "/instagram-reel-2.png", // Segunda imagen real subida por el usuario
+    postUrl: "https://www.instagram.com/p/DR4muyZkUHN/", // Segundo link real provisto por el usuario
+    likes: "1,320",
+    comments: "94"
   },
   {
     type: "CONSEJO LEGAL",
@@ -764,7 +764,7 @@ function BorsaAbogados() {
           {[
             { 
               q: "¿Tengo que pagar algo para iniciar mi reclamo?", 
-              a: "Absolutamente nada. Trabajamos bajo la modalid de 'pacto de cuota litis', lo que significa que financiamos todos los gastos del proceso (cartas documento, mediaciones, peritos) y solo cobramos un porcentaje de honorarios previamente pactado cuando vos cobres tu indemnización. Si no ganamos, no nos debés nada." 
+              a: "Absolutamente nada. Trabajamos bajo la modalid de 'pacto de cuota litis', lo que significa que financiamos todos los gastos del proceso (cartas documento, mediaciones, peritos) and solo cobramos un porcentaje de honorarios previamente pactado cuando vos cobres tu indemnización. Si no ganamos, no nos debés nada." 
             },
             { 
               q: "¿Cuánto tiempo tengo para reclamar después del accidente?", 
@@ -813,7 +813,7 @@ function BorsaAbogados() {
               No dejes pasar el tiempo. Reclamá lo que te corresponde.
             </h2>
             <p className="text-base sm:text-lg text-slate-200 mb-8 font-light leading-relaxed">
-              Las aseguradoras juegan con el desgaste and el paso del tiempo. Iniciá hoy tu consulta gratuita por WhatsApp y asegurá tu máxima indemnización con el respaldo de especialistas.
+              Las aseguradoras juegan con el desgaste y el paso del tiempo. Iniciá hoy tu consulta gratuita por WhatsApp y asegurá tu máxima indemnización con el respaldo de especialistas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
