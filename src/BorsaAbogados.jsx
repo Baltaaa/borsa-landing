@@ -47,14 +47,14 @@ const INSTAGRAM_POSTS = [
     comments: "94"
   },
   {
-    type: "CONSEJO LEGAL",
-    category: "Sucesiones",
-    title: "Sucesiones Express: ¿Cómo iniciar el trámite en PBA y CABA?",
-    desc: "Te explicamos de forma sencilla qué documentación necesitás para iniciar la sucesión de un bien inmueble o vehículo de manera ágil y sin complicaciones...",
-    imgSrc: "/borsa-office-hero.jpg", // Podés poner una foto tuya o captura en la carpeta public/
-    postUrl: "https://www.instagram.com/p/DF8_9_vR_vR/", // Reemplazá con el link real de tu post
-    likes: "1,105",
-    comments: "67"
+    type: "REEL",
+    category: "Derecho de Familia",
+    title: "Familia: Cuidado de los hijos y régimen de comunicación.",
+    desc: "Te explicamos de forma clara cómo se organiza el cuidado de los hijos, el régimen de comunicación y cómo proteger el bienestar de los más chicos en un proceso familiar...",
+    imgSrc: "/instagram-reel-3.png", // Tercera imagen real subida por el usuario
+    postUrl: "https://www.instagram.com/p/DQZj6nlESJf/", // Tercer link real provisto por el usuario
+    likes: "1,420",
+    comments: "88"
   }
 ]
 
@@ -764,7 +764,7 @@ function BorsaAbogados() {
           {[
             { 
               q: "¿Tengo que pagar algo para iniciar mi reclamo?", 
-              a: "Absolutamente nada. Trabajamos bajo la modalid de 'pacto de cuota litis', lo que significa que financiamos todos los gastos del proceso (cartas documento, mediaciones, peritos) and solo cobramos un porcentaje de honorarios previamente pactado cuando vos cobres tu indemnización. Si no ganamos, no nos debés nada." 
+              a: "Absolutamente nada. Trabajamos bajo la modalid de 'pacto de cuota litis', lo que significa que financiamos todos los gastos del proceso (cartas documento, mediaciones, peritos) y solo cobramos un porcentaje de honorarios previamente pactado cuando vos cobres tu indemnización. Si no ganamos, no nos debés nada." 
             },
             { 
               q: "¿Cuánto tiempo tengo para reclamar después del accidente?", 
