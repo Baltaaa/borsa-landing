@@ -23,6 +23,41 @@ function InstagramIcon({ size = 24, className = "" }) {
   )
 }
 
+// CONFIGURACIÓN DE TUS PUBLICACIONES DE INSTAGRAM
+// Podés cambiar las imágenes, los textos y los links de redirección aquí mismo:
+const INSTAGRAM_POSTS = [
+  {
+    type: "REEL",
+    category: "Siniestros Viales",
+    title: "¿Chocaste? 3 cosas que la aseguradora NO quiere que sepas.",
+    desc: "En este video te explicamos por qué nunca tenés que aceptar la primera oferta de la compañía de seguros sin antes consultar con un especialista...",
+    imgSrc: "/borsa-scales.jpg", // Podés poner una foto tuya o captura del reel en la carpeta public/
+    postUrl: "https://www.instagram.com/p/DF8_9_vR_vR/", // Reemplazá con el link real de tu Reel
+    likes: "1,240",
+    comments: "84"
+  },
+  {
+    type: "INFOGRAFÍA",
+    category: "Accidentes de Trabajo",
+    title: "¿Qué es un accidente In Itinere y cómo reclamar a la ART?",
+    desc: "Si sufriste un accidente yendo o volviendo de tu trabajo, estás cubierto por la ART. Te contamos los requisitos clave para que tu reclamo sea aceptado...",
+    imgSrc: "/borsa-consultation.jpg", // Podés poner una foto tuya o captura en la carpeta public/
+    postUrl: "https://www.instagram.com/p/DF8_9_vR_vR/", // Reemplazá con el link real de tu post
+    likes: "942",
+    comments: "51"
+  },
+  {
+    type: "CONSEJO LEGAL",
+    category: "Sucesiones",
+    title: "Sucesiones Express: ¿Cómo iniciar el trámite en PBA y CABA?",
+    desc: "Te explicamos de forma sencilla qué documentación necesitás para iniciar la sucesión de un bien inmueble o vehículo de manera ágil y sin complicaciones...",
+    imgSrc: "/borsa-office-hero.jpg", // Podés poner una foto tuya o captura en la carpeta public/
+    postUrl: "https://www.instagram.com/p/DF8_9_vR_vR/", // Reemplazá con el link real de tu post
+    likes: "1,105",
+    comments: "67"
+  }
+]
+
 function CountUpNumber({ end, duration = 1500 }) {
   const [count, setCount] = useState(0)
   const hasStarted = useRef(false)
@@ -477,93 +512,50 @@ function BorsaAbogados() {
 
           {/* Instagram Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            {/* Post 1 - Reel Preview */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300">
-              <div className="relative aspect-square bg-slate-900 overflow-hidden">
-                <img 
-                  src="/borsa-scales.jpg" 
-                  alt="Reel: Qué hacer ante un choque" 
-                  className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                    <Play size={28} className="fill-white ml-1" />
+            {INSTAGRAM_POSTS.map((post, idx) => (
+              <a 
+                key={idx}
+                href={post.postUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 block"
+              >
+                <div className="relative aspect-square bg-slate-900 overflow-hidden">
+                  <img 
+                    src={post.imgSrc} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {post.type === "REEL" && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                        <Play size={28} className="fill-white ml-1" />
+                      </div>
+                    </div>
+                  )}
+                  <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                    {post.type === "REEL" ? "🎥 REEL" : `⚖️ ${post.type}`}
+                  </span>
+                </div>
+                <div className="p-6">
+                  <p className="text-xs text-slate-400 font-bold uppercase mb-2">{post.category}</p>
+                  <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2 group-hover:text-[#D1A649] transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
+                    {post.desc}
+                  </p>
+                  <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
+                    <span className="flex items-center gap-1">
+                      <Heart size={14} className="text-red-500 fill-red-500" /> {post.likes} Me gusta
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <MessageCircle size={14} /> {post.comments} comentarios
+                    </span>
                   </div>
                 </div>
-                <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                  🎥 REEL
-                </span>
-              </div>
-              <div className="p-6">
-                <p className="text-xs text-slate-400 font-bold uppercase mb-2">Siniestros Viales</p>
-                <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2">
-                  ¿Chocaste? 3 cosas que la aseguradora NO quiere que sepas.
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
-                  En este video te explicamos por qué nunca tenés que aceptar la primera oferta de la compañía de seguros sin antes consultar con un especialista...
-                </p>
-                <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
-                  <span className="flex items-center gap-1"><Heart size={14} className="text-red-500 fill-red-500" /> 1,240 Me gusta</span>
-                  <span className="flex items-center gap-1"><MessageCircle size={14} /> 84 comentarios</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Post 2 - Image Post */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300">
-              <div className="relative aspect-square bg-slate-900 overflow-hidden">
-                <img 
-                  src="/borsa-consultation.jpg" 
-                  alt="Post: Reclamos de ART" 
-                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-                />
-                <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                  📊 INFOGRAFÍA
-                </span>
-              </div>
-              <div className="p-6">
-                <p className="text-xs text-slate-400 font-bold uppercase mb-2">Accidentes de Trabajo</p>
-                <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2">
-                  ¿Qué es un accidente In Itinere y cómo reclamar a la ART?
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
-                  Si sufriste un accidente yendo o volviendo de tu trabajo, estás cubierto por la ART. Te contamos los requisitos clave para que tu reclamo sea aceptado...
-                </p>
-                <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
-                  <span className="flex items-center gap-1"><Heart size={14} className="text-red-500 fill-red-500" /> 942 Me gusta</span>
-                  <span className="flex items-center gap-1"><MessageCircle size={14} /> 51 comentarios</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Post 3 - Image Post */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300">
-              <div className="relative aspect-square bg-slate-900 overflow-hidden">
-                <img 
-                  src="/borsa-office-hero.jpg" 
-                  alt="Post: Sucesiones" 
-                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-                />
-                <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full">
-                  ⚖️ CONSEJO LEGAL
-                </span>
-              </div>
-              <div className="p-6">
-                <p className="text-xs text-slate-400 font-bold uppercase mb-2">Sucesiones</p>
-                <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2">
-                  Sucesiones Express: ¿Cómo iniciar el trámite en PBA y CABA?
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
-                  Te explicamos de forma sencilla qué documentación necesitás para iniciar la sucesión de un bien inmueble o vehículo de manera ágil y sin complicaciones...
-                </p>
-                <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
-                  <span className="flex items-center gap-1"><Heart size={14} className="text-red-500 fill-red-500" /> 1,105 Me gusta</span>
-                  <span className="flex items-center gap-1"><MessageCircle size={14} /> 67 comentarios</span>
-                </div>
-              </div>
-            </div>
-
+              </a>
+            ))}
           </div>
 
           <div className="text-center mt-12">
