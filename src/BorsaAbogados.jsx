@@ -1,4 +1,4 @@
-import { Scale, Award, Shield, Users, AlertTriangle, CheckCircle, HelpCircle, ArrowRight, Phone, FileText, Heart, Zap, Clock, MapPin, Calendar } from "lucide-react"
+import { Scale, Award, Shield, Users, AlertTriangle, CheckCircle, HelpCircle, ArrowRight, Phone, FileText, Heart, Zap, Clock, MapPin, Calendar, Instagram, MessageCircle, Play } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 
 function CountUpNumber({ end, duration = 1500 }) {
@@ -348,6 +348,57 @@ function BorsaAbogados() {
         </div>
       </section>
 
+      {/* OTHER PRACTICE AREAS - Expanded from Instagram Bio */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-b border-slate-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-xs sm:text-sm tracking-[0.2em] text-[#D1A649] font-bold uppercase mb-3">Soluciones Integrales</p>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B] mb-4">
+              Otras Áreas de Especialización
+            </h2>
+            <p className="text-slate-600 font-light text-base sm:text-lg">
+              Además de ser líderes en siniestros viales, nuestro equipo de abogados asociados brinda asesoramiento de excelencia en diversas ramas del derecho.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Sucesiones",
+                desc: "Tramitamos sucesiones de forma rápida y eficiente en PBA y CABA. Planificación hereditaria y acuerdos de partición de bienes.",
+                icon: FileText
+              },
+              {
+                title: "Derecho Laboral",
+                desc: "Defensa integral del trabajador. Despidos, diferencias salariales, trabajo en negro, acoso laboral y reclamos ante el SECLO.",
+                icon: Users
+              },
+              {
+                title: "Divorcios y Familia",
+                desc: "Divorcios express bilaterales o unilaterales. Convenios reguladores, cuota alimentaria, régimen de comunicación y división de bienes.",
+                icon: Heart
+              },
+              {
+                title: "Derecho Civil",
+                desc: "Contratos, desalojos, incumplimientos contractuales, defensas de derechos reales y reclamos por daños y perjuicios generales.",
+                icon: Scale
+              }
+            ].map((area, idx) => {
+              const Icon = area.icon
+              return (
+                <div key={idx} className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:border-[#D1A649] transition-all duration-300">
+                  <div className="w-10 h-10 rounded-lg bg-[#f4ebe1] flex items-center justify-center mb-4 text-[#D1A649]">
+                    <Icon size={20} />
+                  </div>
+                  <h3 className="text-lg font-serif font-bold text-[#0B132B] mb-2">{area.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">{area.desc}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* SECONDARY MULTIMEDIA - Consultation & Office */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-12 gap-12 items-center">
@@ -383,6 +434,125 @@ function BorsaAbogados() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INSTAGRAM PREVIEW SECTION */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-slate-100 border-t border-b border-slate-200">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 text-pink-600 font-bold text-sm uppercase tracking-wider mb-3">
+              <Instagram size={18} /> @borsa.abogados
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B] mb-4">
+              Nuestra Comunidad en Instagram
+            </h2>
+            <p className="text-slate-600 font-light text-base">
+              Compartimos consejos legales diarios, análisis de casos reales y guías prácticas para que conozcas tus derechos.
+            </p>
+          </div>
+
+          {/* Instagram Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            {/* Post 1 - Reel Preview */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-slate-900 overflow-hidden">
+                <img 
+                  src="/borsa-scales.jpg" 
+                  alt="Reel: Qué hacer ante un choque" 
+                  className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <Play size={28} className="fill-white ml-1" />
+                  </div>
+                </div>
+                <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                  🎥 REEL
+                </span>
+              </div>
+              <div className="p-6">
+                <p className="text-xs text-slate-400 font-bold uppercase mb-2">Siniestros Viales</p>
+                <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2">
+                  ¿Chocaste? 3 cosas que la aseguradora NO quiere que sepas.
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
+                  En este video te explicamos por qué nunca tenés que aceptar la primera oferta de la compañía de seguros sin antes consultar con un especialista...
+                </p>
+                <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
+                  <span className="flex items-center gap-1"><Heart size={14} className="text-red-500 fill-red-500" /> 1,240 Me gusta</span>
+                  <span className="flex items-center gap-1"><MessageCircle size={14} /> 84 comentarios</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Post 2 - Image Post */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-slate-900 overflow-hidden">
+                <img 
+                  src="/borsa-consultation.jpg" 
+                  alt="Post: Reclamos de ART" 
+                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                  📊 INFOGRAFÍA
+                </span>
+              </div>
+              <div className="p-6">
+                <p className="text-xs text-slate-400 font-bold uppercase mb-2">Accidentes de Trabajo</p>
+                <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2">
+                  ¿Qué es un accidente In Itinere y cómo reclamar a la ART?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
+                  Si sufriste un accidente yendo o volviendo de tu trabajo, estás cubierto por la ART. Te contamos los requisitos clave para que tu reclamo sea aceptado...
+                </p>
+                <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
+                  <span className="flex items-center gap-1"><Heart size={14} className="text-red-500 fill-red-500" /> 942 Me gusta</span>
+                  <span className="flex items-center gap-1"><MessageCircle size={14} /> 51 comentarios</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Post 3 - Image Post */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-slate-900 overflow-hidden">
+                <img 
+                  src="/borsa-office-hero.jpg" 
+                  alt="Post: Sucesiones" 
+                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                  ⚖️ CONSEJO LEGAL
+                </span>
+              </div>
+              <div className="p-6">
+                <p className="text-xs text-slate-400 font-bold uppercase mb-2">Sucesiones</p>
+                <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2">
+                  Sucesiones Express: ¿Cómo iniciar el trámite en PBA y CABA?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
+                  Te explicamos de forma sencilla qué documentación necesitás para iniciar la sucesión de un bien inmueble o vehículo de manera ágil y sin complicaciones...
+                </p>
+                <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
+                  <span className="flex items-center gap-1"><Heart size={14} className="text-red-500 fill-red-500" /> 1,105 Me gusta</span>
+                  <span className="flex items-center gap-1"><MessageCircle size={14} /> 67 comentarios</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="text-center mt-12">
+            <a 
+              href="https://www.instagram.com/borsa.abogados/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:opacity-90 hover:scale-105 transition-all shadow-lg"
+            >
+              <Instagram size={20} /> Ver Perfil Completo en Instagram
+            </a>
           </div>
         </div>
       </section>
@@ -544,7 +714,7 @@ function BorsaAbogados() {
               {
                 name: "Lucía S. (CABA)",
                 case: "Choque de Atrás - Latigazo Cervical",
-                text: "Estaba frenada en el semáforo y me chocaron de atrás. Tenía un dolor terrible de cuello pero no sabía si correspondía reclamar. Me asesoraron al instante, hicieron la denuncia y en menos de 3 meses cobré la indemnización por las lesiones. Súper rápidos y transparentes."
+                text: "Estaba frenada en el semáforo y me chocaron de atrás. Tenía un dolor terrible de cuello pero no sabía si correspondía reclamar. Me asesoraron al instante, hicieron la denuncia and en menos de 3 meses cobré la indemnización por las lesiones. Súper rápidos y transparentes."
               },
               {
                 name: "Roberto M. (Buenos Aires)",
