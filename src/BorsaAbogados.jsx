@@ -245,7 +245,7 @@ function BorsaAbogados() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] md:aspect-auto md:h-[550px]">
             <img 
-              src="/borsa-abogados-socios.png" 
+              src="/borsa-lawyers-team.jpg" 
               alt="Socios de Borsa Abogados" 
               className="w-full h-full object-cover"
             />
@@ -369,7 +369,7 @@ function BorsaAbogados() {
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4]">
                 <img 
-                  src="/borsa-abogado-solo.png" 
+                  src="/borsa-consultation.jpg" 
                   alt="Abogado de Borsa en su escritorio" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -579,10 +579,10 @@ function BorsaAbogados() {
           {[
             { 
               q: "¿Tengo que pagar algo para iniciar mi reclamo?", 
-              a: "Absolutamente nada. Trabajamos bajo la modalidad de 'pacto de cuota litis', lo que significa que financiamos todos los gastos del proceso (cartas documento, mediaciones, peritos) y solo cobramos un porcentaje de honorarios previamente pactado cuando vos cobres tu indemnización. Si no ganamos, no nos debés nada." 
+              a: "Absolutamente nada. Trabajamos bajo la modalid de 'pacto de cuota litis', lo que significa que financiamos todos los gastos del proceso (cartas documento, mediaciones, peritos) y solo cobramos un porcentaje de honorarios previamente pactado cuando vos cobres tu indemnización. Si no ganamos, no nos debés nada." 
             },
             { 
-              q: "How much time do I have to claim after the accident?", 
+              q: "¿Cuánto tiempo tengo para reclamar después del accidente?", 
               a: "El plazo legal para realizar el reclamo civil es de hasta 3 años desde la fecha del accidente. Sin embargo, es fundamental actuar dentro de las primeras 72 horas para realizar las denuncias correspondientes en las aseguradoras y asegurar las pruebas (testigos, fotos, peritajes médicos)." 
             },
             { 
