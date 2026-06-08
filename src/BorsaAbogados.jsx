@@ -1,5 +1,27 @@
-import { Scale, Award, Shield, Users, AlertTriangle, CheckCircle, HelpCircle, ArrowRight, Phone, FileText, Heart, Zap, Clock, MapPin, Calendar, Instagram, MessageCircle, Play } from "lucide-react"
+import { Scale, Award, Shield, Users, AlertTriangle, CheckCircle, HelpCircle, ArrowRight, Phone, FileText, Heart, Zap, Clock, MapPin, Calendar, MessageCircle, Play } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
+
+// Icono de Instagram personalizado para evitar problemas de versión de lucide-react
+function InstagramIcon({ size = 24, className = "" }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  )
+}
 
 function CountUpNumber({ end, duration = 1500 }) {
   const [count, setCount] = useState(0)
@@ -443,7 +465,7 @@ function BorsaAbogados() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 text-pink-600 font-bold text-sm uppercase tracking-wider mb-3">
-              <Instagram size={18} /> @borsa.abogados
+              <InstagramIcon size={18} /> @borsa.abogados
             </div>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B] mb-4">
               Nuestra Comunidad en Instagram
@@ -551,7 +573,7 @@ function BorsaAbogados() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:opacity-90 hover:scale-105 transition-all shadow-lg"
             >
-              <Instagram size={20} /> Ver Perfil Completo en Instagram
+              <InstagramIcon size={20} /> Ver Perfil Completo en Instagram
             </a>
           </div>
         </div>
@@ -714,7 +736,7 @@ function BorsaAbogados() {
               {
                 name: "Lucía S. (CABA)",
                 case: "Choque de Atrás - Latigazo Cervical",
-                text: "Estaba frenada en el semáforo y me chocaron de atrás. Tenía un dolor terrible de cuello pero no sabía si correspondía reclamar. Me asesoraron al instante, hicieron la denuncia and en menos de 3 meses cobré la indemnización por las lesiones. Súper rápidos y transparentes."
+                text: "Estaba frenada en el semáforo y me chocaron de atrás. Tenía un dolor terrible de cuello pero no sabía si correspondía reclamar. Me asesoraron al instante, hicieron la denuncia y en menos de 3 meses cobré la indemnización por las lesiones. Súper rápidos y transparentes."
               },
               {
                 name: "Roberto M. (Buenos Aires)",
