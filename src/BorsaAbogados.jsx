@@ -64,12 +64,12 @@ function BorsaAbogados() {
           animation: fadeInUp 0.6s ease-out forwards;
         }
         .hero-gradient {
-          background: linear-gradient(135deg, #111a2b 0%, #1e2d4a 100%);
+          background: linear-gradient(135deg, #0B132B 0%, #1C2541 100%);
         }
       `}</style>
 
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 bg-[#111a2b] border-b border-white/10 shadow-md py-1 sm:py-2">
+      <nav className="sticky top-0 z-50 bg-[#0B132B] border-b border-white/10 shadow-md py-1 sm:py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center overflow-hidden h-12 sm:h-16 md:h-20">
             <img 
@@ -92,7 +92,6 @@ function BorsaAbogados() {
 
       {/* HERO SECTION - Meta Ads Optimized with Split Layout */}
       <section className="relative hero-gradient text-white px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10">
           
           {/* Left Column */}
@@ -151,7 +150,7 @@ function BorsaAbogados() {
               <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider animate-pulse">
                 Urgente
               </div>
-              <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e2d4a] mb-2">Consulta Express</h3>
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#0B132B] mb-2">Consulta Express</h3>
               <p className="text-sm text-slate-500 mb-6">Completá y un abogado especialista te llamará en menos de 15 minutos.</p>
               
               <form onSubmit={(e) => {
@@ -169,7 +168,7 @@ function BorsaAbogados() {
                     name="name"
                     required 
                     placeholder="Ej: Juan Pérez" 
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#32486c] text-sm"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1C2541] text-sm"
                   />
                 </div>
                 <div>
@@ -179,7 +178,7 @@ function BorsaAbogados() {
                     name="phone"
                     required 
                     placeholder="Ej: 11 2334 6490" 
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#32486c] text-sm"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1C2541] text-sm"
                   />
                 </div>
                 <div>
@@ -189,13 +188,13 @@ function BorsaAbogados() {
                     rows="3" 
                     required
                     placeholder="Ej: Me chocaron de atrás ayer en Av. Colón, tengo dolor de cuello..." 
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#32486c] text-sm resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#1C2541] text-sm resize-none"
                   />
                 </div>
                 <button 
                   type="submit" 
                   className="w-full py-4 text-white font-bold rounded-lg hover:opacity-95 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2"
-                  style={{ backgroundColor: '#1e2d4a' }}
+                  style={{ backgroundColor: '#1C2541' }}
                 >
                   <Scale size={16} /> Evaluar Mi Caso Gratis
                 </button>
@@ -214,25 +213,25 @@ function BorsaAbogados() {
       <section className="bg-white border-b border-slate-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1e2d4a] mb-1">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#0B132B] mb-1">
               <CountUpNumber end={98} />%
             </p>
             <p className="text-xs sm:text-sm text-slate-500 font-medium uppercase tracking-wider">Casos Ganados</p>
           </div>
           <div>
-            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1e2d4a] mb-1">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#0B132B] mb-1">
               $<CountUpNumber end={45} />M+
             </p>
             <p className="text-xs sm:text-sm text-slate-500 font-medium uppercase tracking-wider">En Indemnizaciones</p>
           </div>
           <div>
-            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1e2d4a] mb-1">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#0B132B] mb-1">
               <CountUpNumber end={30} />+
             </p>
             <p className="text-xs sm:text-sm text-slate-500 font-medium uppercase tracking-wider">Años de Trayectoria</p>
           </div>
           <div>
-            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1e2d4a] mb-1">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#0B132B] mb-1">
               24/7
             </p>
             <p className="text-xs sm:text-sm text-slate-500 font-medium uppercase tracking-wider">Soporte de Urgencia</p>
@@ -258,7 +257,7 @@ function BorsaAbogados() {
           
           <div className="space-y-6">
             <p className="text-xs sm:text-sm tracking-[0.2em] text-[#D1A649] font-bold uppercase">Respaldo Institucional</p>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1e2d4a]">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B]">
               Un equipo de especialistas defendiendo tus derechos
             </h2>
             <p className="text-slate-600 font-light text-base sm:text-lg leading-relaxed">
@@ -291,7 +290,7 @@ function BorsaAbogados() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-xs sm:text-sm tracking-[0.2em] text-[#D1A649] font-bold uppercase mb-3">Tu Reclamo Completo</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1e2d4a] mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#0B132B] mb-4">
               ¿Qué conceptos reclamamos por vos?
             </h2>
             <p className="text-slate-600 font-light text-base sm:text-lg">
@@ -338,7 +337,7 @@ function BorsaAbogados() {
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{ backgroundColor: '#f4ebe1' }}>
                     <Icon style={{ color: '#D1A649' }} size={24} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e2d4a] mb-3">{item.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-serif font-bold text-[#0B132B] mb-3">{item.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed font-light">{item.desc}</p>
                 </div>
               )
@@ -352,7 +351,7 @@ function BorsaAbogados() {
         <div className="grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-6 space-y-6 order-2 md:order-1">
             <p className="text-xs sm:text-sm tracking-[0.2em] text-[#D1A649] font-bold uppercase">Asesoramiento Personalizado</p>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1e2d4a]">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B]">
               Evaluación científica del daño
             </h2>
             <p className="text-slate-600 font-light text-base leading-relaxed">
@@ -387,7 +386,7 @@ function BorsaAbogados() {
       </section>
 
       {/* WHAT TO DO IN CASE OF ACCIDENT - AGM Inspired Guide */}
-      <section className="bg-[#111a2b] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#0B132B] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
@@ -453,7 +452,7 @@ function BorsaAbogados() {
           {/* Left - Text */}
           <div>
             <p className="text-xs sm:text-sm tracking-[0.2em] text-[#D1A649] font-bold uppercase mb-3">Nuestra Garantía</p>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1e2d4a] mb-6">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B] mb-6">
               ¿Por qué reclamar con Borsa Abogados?
             </h2>
             <p className="text-slate-600 font-light text-base leading-relaxed mb-6">
@@ -486,7 +485,7 @@ function BorsaAbogados() {
                 href="https://wa.me/541123346490?text=Hola%20Borsa%20Abogados,%20quiero%20hacer%20una%20consulta%20por%20un%20accidente." 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#1e2d4a] font-bold hover:text-[#D1A649] transition-colors"
+                className="inline-flex items-center gap-2 text-[#0B132B] font-bold hover:text-[#D1A649] transition-colors"
               >
                 Conocé más sobre nuestro método de trabajo <ArrowRight size={16} />
               </a>
@@ -496,7 +495,7 @@ function BorsaAbogados() {
           {/* Right - Visual Card */}
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full" style={{ backgroundColor: '#D1A649' }}></div>
-            <h3 className="text-xl font-serif font-bold text-[#1e2d4a] mb-6">Compromiso de Transparencia</h3>
+            <h3 className="text-xl font-serif font-bold text-[#0B132B] mb-6">Compromiso de Transparencia</h3>
             
             <div className="space-y-6">
               <div className="pb-6 border-b border-slate-100">
@@ -525,7 +524,7 @@ function BorsaAbogados() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-xs sm:text-sm tracking-[0.2em] text-[#D1A649] font-bold uppercase mb-3">Casos Reales</p>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1e2d4a] mb-4">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B] mb-4">
               Opiniones de personas que confiaron en nosotros
             </h2>
             <p className="text-slate-600 font-light">
@@ -570,7 +569,7 @@ function BorsaAbogados() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs sm:text-sm tracking-[0.2em] text-[#D1A649] font-bold uppercase mb-3">Preguntas Frecuentes</p>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1e2d4a]">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0B132B]">
             Despejá tus dudas sobre reclamos
           </h2>
         </div>
@@ -623,7 +622,6 @@ function BorsaAbogados() {
       {/* FINAL CTA SECTION */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24 max-w-7xl mx-auto">
         <div className="rounded-2xl p-8 sm:p-12 md:p-16 text-center text-white relative overflow-hidden shadow-2xl hero-gradient">
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-6">
               No dejes pasar el tiempo. Reclamá lo que te corresponde.
@@ -653,7 +651,7 @@ function BorsaAbogados() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#111a2b] text-slate-400 px-4 sm:px-6 lg:px-8 py-12 border-t border-white/5">
+      <footer className="bg-[#0B132B] text-slate-400 px-4 sm:px-6 lg:px-8 py-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 mb-8">
           <div>
             <div className="flex items-center overflow-hidden h-12 sm:h-16 md:h-20 -ml-4 sm:-ml-6 md:-ml-8">
