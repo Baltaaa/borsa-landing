@@ -69,23 +69,25 @@ function BorsaAbogados() {
       `}</style>
 
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 bg-[#0B132B] border-b border-white/10 shadow-md py-1 sm:py-2">
+      <nav className="sticky top-0 z-50 bg-[#0B132B] border-b border-white/10 shadow-md py-2 sm:py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center overflow-hidden h-12 sm:h-16 md:h-20">
+          {/* Logo agrandado en mobile */}
+          <div className="flex items-center overflow-hidden h-14 sm:h-18 md:h-20">
             <img 
               src="/borsa-logo2.png" 
               alt="Borsa Abogados" 
-              className="h-24 sm:h-32 md:h-40 w-auto object-contain -my-6 sm:-my-8 md:-my-10 transition-all duration-300" 
+              className="h-28 sm:h-36 md:h-40 w-auto object-contain -my-7 sm:-my-9 md:-my-10 transition-all duration-300" 
             />
           </div>
+          {/* Botón más compacto en mobile para equilibrar */}
           <a 
             href="https://wa.me/541123346490?text=Hola%20Borsa%20Abogados,%20necesito%20asesoramiento%20por%20un%20accidente%20de%20tránsito." 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-4 sm:px-6 py-2.5 text-white rounded-md font-bold text-xs sm:text-sm hover:shadow-lg hover:scale-105 transition-all flex items-center gap-2" 
+            className="px-3 sm:px-6 py-2 sm:py-2.5 text-white rounded-md font-bold text-[11px] sm:text-sm hover:shadow-lg hover:scale-105 transition-all flex items-center gap-1.5 shrink-0" 
             style={{ backgroundColor: '#D1A649' }}
           >
-            <Phone size={14} /> Consulta Gratis 24hs
+            <Phone size={12} className="sm:w-3.5 sm:h-3.5" /> Consulta Gratis 24hs
           </a>
         </div>
       </nav>
@@ -261,7 +263,7 @@ function BorsaAbogados() {
               Un equipo de especialistas defendiendo tus derechos
             </h2>
             <p className="text-slate-600 font-light text-base sm:text-lg leading-relaxed">
-              En Borsa Abogados entendemos que un accidente de tránsito altera tu vida por completo. Por eso, no solo te ofrecemos representación legal de primer nivel, sino también un acompañamiento humano e integral.
+              En Borsa Abogados entendemos que un accidente de tránsito altera tu vida por completo. Por eso, no solo te ofrecemos representation legal de primer nivel, sino también un acompañamiento humano e integral.
             </p>
             <p className="text-slate-600 font-light text-base leading-relaxed">
               Contamos con oficinas físicas equipadas para recibirte y coordinar toda la estrategia de tu reclamo con peritos mecánicos, médicos legistas y liquidadores de siniestros.
