@@ -510,15 +510,15 @@ function BorsaAbogados() {
             </p>
           </div>
 
-          {/* Instagram Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Instagram Grid - Optimizado para ser 50% más chico en mobile (2 columnas compactas) */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
             {INSTAGRAM_POSTS.map((post, idx) => (
               <a 
                 key={idx}
                 href={post.postUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 block"
+                className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 block"
               >
                 <div className="relative aspect-square bg-slate-900 overflow-hidden">
                   <img 
@@ -528,29 +528,29 @@ function BorsaAbogados() {
                   />
                   {post.type === "REEL" && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                        <Play size={28} className="fill-white ml-1" />
+                      <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                        <Play className="fill-white ml-0.5 sm:ml-1 w-4 h-4 sm:w-7 sm:h-7" />
                       </div>
                     </div>
                   )}
-                  <span className="absolute top-4 right-4 bg-black/60 text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                  <span className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/60 text-white text-[9px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full flex items-center gap-1">
                     {post.type === "REEL" ? "🎥 REEL" : `⚖️ ${post.type}`}
                   </span>
                 </div>
-                <div className="p-6">
-                  <p className="text-xs text-slate-400 font-bold uppercase mb-2">{post.category}</p>
-                  <h3 className="font-serif font-bold text-slate-800 text-base sm:text-lg mb-2 group-hover:text-[#D1A649] transition-colors">
+                <div className="p-3 sm:p-6">
+                  <p className="text-[9px] sm:text-xs text-slate-400 font-bold uppercase mb-1 sm:mb-2">{post.category}</p>
+                  <h3 className="font-serif font-bold text-slate-800 text-xs sm:text-lg mb-1 sm:mb-2 group-hover:text-[#D1A649] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 font-light mb-4">
+                  <p className="text-[10px] sm:text-sm text-slate-500 line-clamp-2 font-light mb-2 sm:mb-4">
                     {post.desc}
                   </p>
-                  <div className="flex justify-between items-center pt-4 border-t border-slate-100 text-xs text-slate-400 font-semibold">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center pt-2 sm:pt-4 border-t border-slate-100 text-[9px] sm:text-xs text-slate-400 font-semibold gap-1 sm:gap-0">
                     <span className="flex items-center gap-1">
-                      <Heart size={14} className="text-red-500 fill-red-500" /> {post.likes} Me gusta
+                      <Heart size={12} className="text-red-500 fill-red-500 sm:w-3.5 sm:h-3.5" /> {post.likes}
                     </span>
                     <span className="flex items-center gap-1">
-                      <MessageCircle size={14} /> {post.comments} comentarios
+                      <MessageCircle size={12} className="sm:w-3.5 sm:h-3.5" /> {post.comments}
                     </span>
                   </div>
                 </div>
